@@ -28,8 +28,12 @@ export const Header = ({ data }) => {
     <header className={styles.header}>
       <div className={styles.container}>
         {/* ------------------------- */}
-        <a href={'#'} className={styles.logo} onClick={() => setIsOpen(false)}>
-          {logo.text}
+        <a href={'/'} className={styles.logo} onClick={() => setIsOpen(false)}>
+          <img src={logo.src} alt={logo.alt} className={styles.logoImage} />
+          <div className={styles.flex}>
+            <p>{logo.text}</p>
+            <span>{logo.span}</span>
+          </div>
         </a>
         {/* ------------------------- */}
 

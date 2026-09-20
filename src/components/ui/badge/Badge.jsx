@@ -14,7 +14,7 @@ export const Badge = ({
   return (
     <div className={`${styles.badge} ${className}`}>
       {IconLeft && <IconLeft className={iconLeftClassName} />}
-      <span className={styles.text}>{text.toUpperCase()}</span>
+      <span className={styles.text}>{text?.toUpperCase()}</span>
       {IconRight && <IconRight className={iconRightClassName} />}
     </div>
   );

@@ -1,12 +1,16 @@
 // imagenes con nombre de profesionales
-import imagen_ref from '../assets/ref.png'
+
+import logo from '../assets/logo.png';
+import imagen_ref from '../assets/ref.png';
+
 //
 
 const clinicInfo = {
-  name: 'Lic. Sol Paz',
-  phone_number: '',
-  hours: 'Atención con turno previo',
-  location: 'Atención presencial y online',
+  name: 'MindComfort',
+  secondName: 'Acompañamiento psicológico',
+  phone_number: '522225296965',
+  hours: 'Atención en línea con turno previo',
+  location: 'Modalidad 100% Online',
 };
 
 const { name, phone_number } = clinicInfo;
@@ -19,89 +23,104 @@ export const landing_data = {
   header: {
     logo: {
       // en caso de usar logo
-      src: '',
+      src: logo,
       href: '/',
       alt: clinicInfo.name,
       text: clinicInfo.name,
+      span: clinicInfo.secondName,
     },
 
     nav_links: [
       { id: 'about', label: 'Sobre mí', href: '#team' },
       { id: 'services', label: 'Servicios', href: '#services' },
       { id: 'faq', label: 'Preguntas frecuentes', href: '#faq' },
-      { id: 'location', label: 'Contacto', href: '#location' },
     ],
     cta: {
       icon: 'message',
       label: 'Reserva de turnos',
-      href: buildWaLink('Hola Lic. Sol Paz, quisiera consultar por un turno.'),
+      href: buildWaLink(
+        'Hola Psic. Guadalupe, quisiera consultar por un turno para iniciar mi proceso.',
+      ),
       size: 'sm',
       variant: 'secondary',
     },
   },
 
   hero: {
-    badge: 'Psicoanálisis Infanto-Juvenil',
-    title: 'Un espacio de escucha y acompañamiento',
-    subtitle:'Brindo un espacio cálido, seguro y libre de juicios para acompañar a cada paciente respetando sus tiempos y particularidades.',
-    ctas: [{
-      icon: 'message',
-      label: 'Agendar consulta',
-      href: '#',
-      size: '',
-      variant: 'secondary',
-    },
-    {
-      label: 'Servicios',
-      href: '#services',
-      size: '',
-      variant: 'primary',}]
+    badge: 'Acompañamiento Psicológico',
+    title: 'Un espacio para volver a ti',
+    subtitle:
+      'Acompañamiento desde la empatía, la escucha y el respeto. Recordando que pedir apoyo también es una forma de cuidarnos.',
+    ctas: [
+      {
+        icon: 'message',
+        label: 'Agendar consulta',
+        href: buildWaLink(
+          'Hola Psic. Guadalupe, me gustaría agendar una consulta online.',
+        ),
+        size: '',
+        variant: 'secondary',
+      },
+      {
+        label: 'Servicios',
+        href: '#services',
+        size: '',
+        variant: 'primary',
+      },
+    ],
   },
 
   services: {
-    title: 'Servicios y Áreas de Atención',
-    subtitle: 'Acompañamiento especializado adaptado a cada etapa del desarrollo.',
+    title: 'Servicios y Modalidad de Atención',
+    subtitle:
+      'Acompañamiento especializado adaptado a cada etapa del desarrollo.',
 
     // cards
     items: [
       {
         icon: 'child',
         id: 1,
-        title: 'Psicología Infantil',
-        desc: 'Espacio terapéutico a través del juego y la palabra para abordar dificultades emocionales, conductuales o escolares en los más chicos.',
+        title: 'Psicoterapia Individual Online',
+        desc: 'Un espacio de escucha activa, libre de juicios, para procesar tus emociones y trabajar en tu bienestar personal.',
         cta: {
           icon: 'message',
           label: 'Consultar por este servicio',
-          href: buildWaLink('Hola Lic. Sol Paz, quisiera consultar sobre la atención en Psicología Infantil.'),
+          href: buildWaLink(
+            'Hola Psic. Guadalupe, quisiera consultar sobre las sesiones de Psicoterapia Individual Online.',
+          ),
         },
         delay: '.15',
       },
       {
         icon: 'user',
         id: 2,
-        title: 'Atención a Púberes y Adolescentes',
-        desc: 'Acompañamiento en etapas de cambio, duelo, manejo de ansiedades, identidad y vínculos en la transición hacia la juventud.',
+        title: 'Educación Emocional',
+        desc: 'Aprende a comprender lo que sientes, desarrollar recursos psicológicos y gestionar tus emociones de manera saludable.',
         cta: {
           icon: 'message',
           label: 'Consultar por este servicio',
-          href: buildWaLink('Hola Lic. Sol Paz, quisiera consultar sobre la atención en Psicología Infantil.'),
+          href: buildWaLink(
+            'Hola Psic. Guadalupe, quisiera más información sobre las consultas de Educación Emocional.',
+          ),
         },
         delay: '.15',
       },
       {
         icon: 'users',
         id: 3,
-        title: 'Orientación a Padres y Familias',
-        desc: 'Espacio de asesoramiento y escucha para padres frente a los desafíos en la crianza y la dinámica familiar.',
+        title: 'Acompañamiento Empático',
+        desc: 'Proceso adaptado a tus tiempos para transitar momentos de cambio, ansiedad o búsqueda de claridad en tu vida.',
         cta: {
           icon: 'message',
           label: 'Consultar por este servicio',
-          href: buildWaLink('Hola Lic. Sol Paz, quisiera consultar sobre Orientación a Padres/Familias.'),
+          href: buildWaLink(
+            'Hola Psic. Guadalupe, quisiera orientación para iniciar un proceso de acompañamiento.',
+          ),
         },
         delay: '.15',
-      },]},
-
-
+      },
+    ],
+  },
 
   team: {
     title: 'Profesional a cargo',
@@ -111,23 +130,25 @@ export const landing_data = {
         id: 2,
         image: {
           src: imagen_ref,
-          alt: 'Profesional',
+          alt: 'Psic. Guadalupe Galaviz Rodríguez',
         },
-        name: 'Lic. Sol Evelyn Paz',
-        speciality: 'Psicóloga clínica',
+        name: 'Psic. Guadalupe Galaviz Rodríguez',
+        speciality: 'Psicóloga Clínica / Terapeuta Online',
         cta: {
           icon: 'message',
           label: 'Reservar turno',
-          href: '#',
+          href: buildWaLink(
+            'Hola Psic. Guadalupe, quisiera agendar una primera sesión.',
+          ),
         },
       },
     ],
     about: [
-      '¿Quién soy? — Soy Evelyn Paz, psicóloga clínica. Elegí la psicología porque siempre me interesó comprender lo que hay detrás de lo que sentimos, pensamos y hacemos.',
-      'Creo profundamente en la importancia de tener un espacio donde podamos hablar sin sentirnos juzgados.',
-      '¿Por qué elegí Psicología? — Elegí esta profesión porque quería acompañar a las personas en momentos en los que quizás no encuentran cómo poner en palabras lo que les pasa. Porque detrás de una conducta, un enojo, un silencio o una dificultad, siempre hay algo que necesita ser escuchado.',
-      '¿Para qué estudié? — Me formé para poder brindar herramientas que ayuden a comprender lo que sucede, desarrollar recursos y transitar las dificultades de una manera diferente. La terapia no se trata solamente de "resolver un problema", sino también de conocerse, expresarse y construir nuevas posibilidades.',
-      'Mi forma de trabajar — Busco construir un espacio cálido, seguro y sin juicios, donde cada persona pueda sentirse escuchada y comprendida. Trabajo respetando los tiempos y las particularidades de cada paciente.']
+      '¿Quién soy? — Soy la Psic. Guadalupe Galaviz Rodríguez. Decidí crear MindComfort con la intención de brindar un acompañamiento psicológico basado en la empatía, la escucha y el respeto.',
+      'Un espacio para volver a ti — A veces no necesitamos tener todo resuelto para comenzar a hablar de lo que sentimos. Creo firmemente en la importancia de ofrecer un lugar donde puedas expresarte con tranquilidad.',
+      'Mi enfoque — Trabajo desde la educación emocional y el acompañamiento humano. Entiendo que pedir apoyo es una forma de cuidarnos y un paso valioso hacia tu bienestar.',
+      'Modalidad Online — Te acompaño sin importar dónde te encuentres, brindándote la comodidad y la flexibilidad de llevar tu proceso de manera virtual.',
+    ],
   },
 
   about: {
@@ -154,17 +175,17 @@ export const landing_data = {
   },
 
   reviews_section: {
-    badge: {icon:'star', label:'escucha y acompañamiento'},
+    badge: { icon: 'star', label: 'escucha y acompañamiento' },
     title: 'Testimonios',
-    subtitle:'Por razones éticas y de confidencialidad, los testimonios se comparten preservando la identidad de pacientes y familias.',
+    subtitle:
+      'Por razones éticas y de confidencialidad, los testimonios se comparten preservando la identidad de pacientes y familias.',
 
     items: [
       {
         id: 1,
         name: 'Nombre Apellido',
         rating: 5,
-        review:
-          'Nos sentimos contenidos durante todo el proceso',
+        review: 'Nos sentimos contenidos durante todo el proceso',
       },
       {
         id: 2,
@@ -177,8 +198,7 @@ export const landing_data = {
         id: 3,
         name: 'Nombre Apellido',
         rating: 5,
-        review:
-          'Encontramos un espacio de confianza para hablar',
+        review: 'Encontramos un espacio de confianza para hablar',
       },
     ],
 
@@ -190,20 +210,16 @@ export const landing_data = {
   },
 
   cta_section: {
-    title: '¿Necesitás coordinar una primera entrevista?',
-    text: 'Escribime para despejar tus dudas o agendar un turno. Construyamos juntos un espacio de escucha para acompañar a tu hijo o familia.',
+    title: '¿Te gustaría dar el primer paso?',
+    text: 'A veces no necesitamos tener todo resuelto para empezar. Escribime para despejar tus dudas o agendar tu primera sesión.',
     cta: [
       {
         icon: 'message',
         label: 'Reservar turno',
         variant: 'secondary',
-        href:buildWaLink('Hola Lic. Sol Paz, quisiera agendar una primera entrevista.'),
-      },
-      {
-        icon: '',
-        label: 'Ubicación',
-        variant: '',
-        href:'#location'
+        href: buildWaLink(
+          'Hola Lic. Sol Paz, quisiera agendar una primera entrevista.',
+        ),
       },
     ],
   },
@@ -258,40 +274,36 @@ export const landing_data = {
   },
 
   coverage_section: {
-    title: 'Obras sociales y prepagas',
+    title: 'Áreas en las que puedo ayudarte',
     items: [
-      'OSDE',
-      'OMINT',
-      'OSPJN',
-      'SANCOR',
-      'AVALIAN',
-      'AMFFA',
-      'OPDEA',
-      'OSMISS',
+      'Autoestima',
+      'Estrés',
+      'Regulación emocional',
+      'Ansiedad',
+      'Organización',
+      'Hábitos',
+      'Relaciones y límites personales',
+      'Escucha activa',
+      'Orientación',
+      'Apoyo emocional',
+      'Un espacio seguro y respetuoso',
+      'Libre de prejuicios',
     ],
   },
 
   location_section: {
-    title: 'Dónde estamos',
-    subtitle: 'Texto de referencia — reemplazá con la dirección real.',
-    coordenates: `34°56'21.2"S 57°58'26.9"W`,
-    items: [
-      {
-        icon: 'location',
-        name: 'Dirección',
-        info: clinicInfo.location,
-      },
-      {
-        icon: 'clock',
-        name: 'Horarios',
-        info: clinicInfo.hours,
-      },
-      { icon: 'tel', name: 'Teléfono', info: clinicInfo.phone_number },
-    ],
-    ctas: [
-      { label: 'Google Maps', href: '#', variant: 'secondary' },
-      { label: 'Reservar turno', href: '#', variant: 'primary' },
-    ],
+    badge: { icon: 'online', label: 'Atención online' },
+    title: 'Reservá tu sesión online',
+    subtitle:
+      'Las consultas se realizan de forma 100% online, con horarios flexibles y acompañamiento personalizado desde donde estés.',
+    cta: {
+      icon: 'message',
+      label: 'Reservar turno',
+      href: buildWaLink(
+        'Hola Lic. Sol Paz, quisiera agendar una primera entrevista.',
+      ),
+      variant: 'secondary',
+    },
   },
 
   footer: {
@@ -299,8 +311,14 @@ export const landing_data = {
     cta: { icon: 'message', label: 'Reserva de turnos', variant: '' },
 
     rrss: [
-      { icon: 'facebook', href: 'https://www.facebook.com/groups/974306967539760/user/100000068052718/?locale=es_LA' },
-      { icon: 'instagram', href: 'https://www.instagram.com/lic_sol_paz.psicologa/?hl=es-la' },
+      {
+        icon: 'facebook',
+        href: 'https://www.facebook.com/groups/974306967539760/user/100000068052718/?locale=es_LA',
+      },
+      {
+        icon: 'instagram',
+        href: 'https://www.instagram.com/lic_sol_paz.psicologa/?hl=es-la',
+      },
     ],
 
     copyright: `© 2026 ${clinicInfo.name}. Todos los derechos reservados.`,

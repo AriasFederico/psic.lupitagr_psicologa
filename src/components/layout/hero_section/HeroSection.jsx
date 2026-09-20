@@ -25,7 +25,7 @@ export const HeroSection = ({ data }) => {
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.45 }}>
             {ctas?.map(({ icon, label, href, variant }) => (
-              <ButtonCta icon={icon} label={label} href={href} variant={variant} />
+              <ButtonCta icon={icon} label={label} href={href} variant={variant} key={label} />
             ))}
           </motion.div>
         </div>

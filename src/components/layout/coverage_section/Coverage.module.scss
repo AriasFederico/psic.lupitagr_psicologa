@@ -1,5 +1,5 @@
 .container {
-    background-color: $bg-soft;
+    // background-color: $bg-soft;
     width: 100%;
     border-top: 1px solid $color-border;
     padding: $space-9 0;
@@ -16,10 +16,10 @@
 
 .items {
     margin-top: $space-4;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    place-items: center;
-    gap: $space-3;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: $space-2;
 
     @include tablet(){
         grid-template-columns: 1fr 1fr 1fr;
@@ -27,14 +27,20 @@
 
     @include desktop(){
         display: flex;
-        align-items: center;
-        gap:$space-3;
+        flex-direction: row;
         justify-content: center;
-        
-        p {
-            font-weight: 700;
-            color: $foreground-muted;
-            letter-spacing: 2px;
-        }
+        flex-wrap: wrap;
     }
+}
+
+.item {
+    display: flex;
+    gap: $space-1;
+    align-items: center;
+    border: 1px solid $color-primary;
+    padding: $space-1 $space-2;
+    border-radius: $radius-sm;
+    background-color: $white;
+    color: $color-primary;
+    text-align: center;
 }

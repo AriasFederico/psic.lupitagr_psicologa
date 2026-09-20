@@ -1,6 +1,8 @@
 import {
   BsArrowDownShort,
   BsArrowUpShort,
+  BsCameraVideo,
+  BsCheckCircle,
   BsCircle,
   BsClock,
   BsFacebook,
@@ -11,13 +13,12 @@ import {
   BsWhatsapp,
 } from 'react-icons/bs';
 
-import { FaChild,FaUsers,FaUser ,FaStar  } from "react-icons/fa";
+import { FaChild, FaStar, FaUser, FaUsers } from 'react-icons/fa';
 import { FcGoogle } from 'react-icons/fc';
 
 export const iconMap = {
   icon: BsCircle, // delete
   message: BsWhatsapp,
-
 
   arrowDown: BsArrowDownShort,
   arrowUp: BsArrowUpShort,
@@ -30,8 +31,10 @@ export const iconMap = {
   instagram: BsInstagram,
   facebook: BsFacebook,
 
-  child:FaChild,
-  users:FaUsers,
-  user:FaUser,
-  star:FaStar,
+  child: FaChild,
+  users: FaUsers,
+  user: FaUser,
+  star: FaStar,
+  check: BsCheckCircle,
+  online: BsCameraVideo,
 };

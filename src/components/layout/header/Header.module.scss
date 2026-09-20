@@ -18,13 +18,44 @@
   }
 
   .logo {
-    font-size: $font-xl;
     font-family: $font-heading;
     font-weight: 700;
-    // color: $foreground;
-    white-space: nowrap;
+    display: flex;
+    align-items: center;
+    gap: $space-1;
     &::after {
       // content: ' asd';
+    }
+  }
+
+  .flex {
+    // display: none;
+    padding-top: $space-1;
+    white-space: nowrap;
+
+    p {
+      line-height: 1;
+      font-size: $font-xl;
+      color: $color-primary;
+      letter-spacing: 1px;
+    }
+
+    span {
+      display: block;
+      font-size: 11px;
+      font-family: $font-primary;
+      color: $foreground-muted;
+      font-style: italic;
+      font-weight: 300;
+      letter-spacing: 1px;
+    }
+  }
+
+  .logoImage {
+    width: 2.5rem;
+
+    @include desktop(){
+      width: 3rem;
     }
   }
   
@@ -82,12 +113,8 @@
   }
 
   .burger {    
-    color: $color-primary;
-
-    .icon {
-      width: 1.7rem;
-      height: 1.7rem;
-    }
+    color: $color-primary;    
+    flex-shrink: 0;
 
     @include desktop(){
       display: none;
