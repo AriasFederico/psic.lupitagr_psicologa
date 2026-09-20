@@ -313,11 +313,11 @@ export const landing_data = {
     rrss: [
       {
         icon: 'facebook',
-        href: 'https://www.facebook.com/groups/974306967539760/user/100000068052718/?locale=es_LA',
+        href: 'https://www.facebook.com/groups/974306967539760/user/100040530693626?locale=es_LA',
       },
       {
         icon: 'instagram',
-        href: 'https://www.instagram.com/lic_sol_paz.psicologa/?hl=es-la',
+        href: 'https://www.instagram.com/psic.lupitagr/',
       },
     ],
 
